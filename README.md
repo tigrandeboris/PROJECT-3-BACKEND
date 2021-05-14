@@ -23,14 +23,14 @@ Task manager App, to be able to manage projects and be more organized.
 | `POST`     | `/api/auth/login`             | Sends user credential info to the DB and authenticates User. |                
 | `POST`     | `/api/auth/logout`            | Destroys the user session.                                   | 
 | `GET`      | `/api/auth/loggedin`          | Checks if the user is logged in.                             |
-| `GET`      | `/api/project`                | Users project page.                                          |
-| `POST`     | `/api/project`                | Users project creation page.                                 |
-| `PUT`      | `/api/project/:id`            | Users project edition page.                                  |
-| `DELETE`   | `/api/project/:id`            | Deletes the project.                                         |
-| `GET`      | `/api/project/:id/tasks`      | Task of a specific project.                                  |
-| `POST`     | `/api/project/:id/tasks`      | New task of a specific project.                              |
-| `PUT`      | `/api/project/:id/tasks/:id`  | Task edition of a specific project.                          |
-| `DELETE`   | `/api/project/:id/tasks/:id`  | Deletes the specific project task.                           |
+| `GET`      | `/api/projects`               | Projects list.                                               |
+| `GET`      | `/api/projects/:id`           | Single project.                                              |
+| `POST`     | `/api/projects`               | New project.                                                 |
+| `PUT`      | `/api/projects/:id`           | Edit project.                                                |
+| `DELETE`   | `/api/projects/:id`           | Deletes project.                                             |
+| `POST`     | `/api/tasks`                  | New task.                                                    |
+| `PUT`      | `/api/tasks/:id`              | Edit task.                                                   |
+| `DELETE`   | `/api/tasks/:id`              | Delete task.                                                 |
 
 ## Models
 User model

@@ -1,43 +1,50 @@
-const express = require('express');
-const Todo = require('../models/Task.model');
+const express = require('express')
+const Task = require('../models/Task.model');
+const Project = require('../models/Project.model');
 const router = express.Router();
 
-router.get("/", (req, res, next) => {
-  Todo.find({ user: req.user.id })
-  .then(todos =>  res.status(200).json(todos))
-  .catch(err => res.status(500).json(err))
-})
 
-router.get("/:id", (req, res, next) => {
-  const { id } = req.params;
-  Todo.findOne({ _id: id, user: req.user.id  })
-  .then(todo => res.status(200).json(todo))
-  .catch(err => res.status(500).json(err))
-})
 
-router.post("/", (req, res, next) => {
-  const { name, description, dueDate, priority } = req.body;
+router.post("/", (req, res) => {
+  const { project_id, name, due_date, priority } = req.body;
 
   if(!name){
     return res.status(400).json({ message: "Name is required"});
   }
 
-  Todo.create({ name, description, dueDate, priority, user: req.user.id  })
-  .then(todo => res.status(200).json(todo))
+  Project.findOne({ _id: project_id, user: req.user.id })
+  .then((project) => {
+    if(!project){
+      return res.status(400).json({ message: "Invalid Project id"});
+    }
+    Task.create({ name, due_date, priority, project })
+    .then(task => res.status(200).json(task))
+    .catch(err => res.status(500).json(err))
+  })
   .catch(err => res.status(500).json(err))
 })
 
-router.put("/:id", (req, res, next) => {
+router.put("/:id", (req, res) => {
   const { id } = req.params;
-  Todo.findOneAndUpdate({ _id: id, user: req.user.id  }, req.body, { new: true })
-  .then(todo => res.status(200).json(todo))
+  Task.findByIdAndUpdate( id, req.body, { new: true })
+  .then(task => {
+    if(!task) {
+      return res.status(404).json();
+    }
+    res.status(200).json(task)
+  })
   .catch(err => res.status(500).json(err))
 })
 
-router.delete("/:id", (req, res, next) => {
+router.delete("/:id", (req, res) => {
   const { id } = req.params;
-  Todo.findOneAndRemove({ _id: id, user: req.user.id  })
-  .then(() => res.status(200).json({ message: `Todo ${id} deleted 🗑`}))
+  Task.findByIdAndRemove(id)
+  .then((task) => {
+    if(!task) {
+      return res.status(404).json();
+    }
+    res.status(200).json({ message: `Task ${task.id} deleted 🗑`})
+  })
   .catch(err => res.status(500).json(err))
 })
 

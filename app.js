@@ -14,13 +14,18 @@ require('./configs/cors.config')(app);
 require('./configs/session.config')(app);
 require('./configs/passport.config')(app);
 
-const tasksRouter = require('./routes/tasks.routes');
-const authRouter = require('./routes/auth.routes');
-app.use('/api/tasks', tasksRouter);
-app.use('/api/auth', authRouter);
 
-//  Catch 404 and respond with error message
-app.use((req, res, next) => {
+//Routes
+const authRouter = require('./routes/auth.routes');
+const projectsRouter = require ('./routes/projects.routes')
+const tasksRouter = require('./routes/tasks.routes');
+app.use('/api/auth', authRouter);
+app.use('/api/projects', projectsRouter)
+app.use('/api/tasks', tasksRouter);
+
+
+
+app.use((req, res) => {
   return res.status(404).json({ message: "Not found"});
 })
 

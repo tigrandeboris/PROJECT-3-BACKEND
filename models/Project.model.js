@@ -3,11 +3,17 @@ const Schema = mongoose.Schema;
 
 const projectSchema = new Schema({
   name: { type: String, required: true },
-  dueDate: { type: Date, default: Date.now() },
+  due_date: { type: Date, default: Date.now() },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-  }
+  },
+  tasks: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Task'
+    }
+  ]
 }, {
   timestamps: true,
   toJSON: {

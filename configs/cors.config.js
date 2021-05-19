@@ -7,7 +7,7 @@ module.exports = (app) => {
       origin: [
           process.env.PUBLIC_DOMAIN,
           'http://project-manager-3.herokuapp.com',
-          'https://roject-manager-3.herokuapp.com'
+          'https://project-manager-3.herokuapp.com'
       ]
     })
   )

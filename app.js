@@ -23,7 +23,11 @@ app.use('/api/auth', authRouter);
 app.use('/api/projects', projectsRouter)
 app.use('/api/tasks', tasksRouter);
 
-
+// ROUTE FOR SERVING REACT APP (index.html)
+app.use((req, res, next) => {
+  // If no previous routes match the request, send back the React app.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 app.use((req, res) => {
   return res.status(404).json({ message: "Not found"});

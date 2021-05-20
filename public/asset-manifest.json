@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.35d385a2.chunk.css",
-    "main.js": "/static/js/main.91cd1e40.chunk.js",
-    "main.js.map": "/static/js/main.91cd1e40.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ff802b85.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ff802b85.js.map",
+    "main.css": "/static/css/main.a6278e2d.chunk.css",
+    "main.js": "/static/js/main.54b9661e.chunk.js",
+    "main.js.map": "/static/js/main.54b9661e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.153f05e3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.153f05e3.js.map",
     "static/css/2.4f8976c6.chunk.css": "/static/css/2.4f8976c6.chunk.css",
-    "static/js/2.a9be7514.chunk.js": "/static/js/2.a9be7514.chunk.js",
-    "static/js/2.a9be7514.chunk.js.map": "/static/js/2.a9be7514.chunk.js.map",
-    "static/js/3.ab30cdc5.chunk.js": "/static/js/3.ab30cdc5.chunk.js",
-    "static/js/3.ab30cdc5.chunk.js.map": "/static/js/3.ab30cdc5.chunk.js.map",
+    "static/js/2.9dd787cd.chunk.js": "/static/js/2.9dd787cd.chunk.js",
+    "static/js/2.9dd787cd.chunk.js.map": "/static/js/2.9dd787cd.chunk.js.map",
+    "static/js/3.7298a697.chunk.js": "/static/js/3.7298a697.chunk.js",
+    "static/js/3.7298a697.chunk.js.map": "/static/js/3.7298a697.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.4f8976c6.chunk.css.map": "/static/css/2.4f8976c6.chunk.css.map",
-    "static/css/main.35d385a2.chunk.css.map": "/static/css/main.35d385a2.chunk.css.map",
-    "static/js/2.a9be7514.chunk.js.LICENSE.txt": "/static/js/2.a9be7514.chunk.js.LICENSE.txt",
+    "static/css/main.a6278e2d.chunk.css.map": "/static/css/main.a6278e2d.chunk.css.map",
+    "static/js/2.9dd787cd.chunk.js.LICENSE.txt": "/static/js/2.9dd787cd.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/static/media/background.e0cbac28.png",
-    "static/media/homepage-banner.26032b4f.svg": "/static/media/homepage-banner.26032b4f.svg"
+    "static/media/index.css": "/static/media/body.ae056fa3.jpg",
+    "static/media/homepage-banner.26032b4f.svg": "/static/media/homepage-banner.26032b4f.svg",
+    "static/media/undraw_To_do_re_jaef.88365338.svg": "/static/media/undraw_To_do_re_jaef.88365338.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff802b85.js",
+    "static/js/runtime-main.153f05e3.js",
     "static/css/2.4f8976c6.chunk.css",
-    "static/js/2.a9be7514.chunk.js",
-    "static/css/main.35d385a2.chunk.css",
-    "static/js/main.91cd1e40.chunk.js"
+    "static/js/2.9dd787cd.chunk.js",
+    "static/css/main.a6278e2d.chunk.css",
+    "static/js/main.54b9661e.chunk.js"
   ]
 }
